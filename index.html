@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation Examples</title>
+  </head>
+  <body>
+    <!-- Form for Username -->
+    <form id="userName">
+      <label>
+        <!-- Label for the Username input -->
+        Username:
+        <!-- Text input for the Username -->
+        <input type="text" name="username" />
+      </label>
+      <!-- Submit button for the Username form -->
+      <button>Submit</button>
+    </form>
+
+    <!-- Form for Email -->
+    <form id="email">
+      <label>
+        <!-- Label for the Email input -->
+        Email:
+        <!-- Email input with required attribute and title for validation -->
+        <input
+          type="email"
+          name="email"
+          id="emailInput"
+          required
+          title="Enter a valid email"
+        />
+      </label>
+      <button>Submit</button>
+    </form>
+
+    <!-- Form for Password -->
+    <form id="password">
+      <label>
+        <!-- Label for the Password input -->
+        Password:
+        <!-- Password input with required, minlength, pattern, and title for validation -->
+        <input
+          type="password"
+          name="password"
+          id="passwordInput"
+          required
+          minlength="8"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          title="Password must be at least 8 characters long and include at least one lowercase letter, one uppercase letter, and one digit."
+        />
+      </label>
+      <button>Submit</button>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
